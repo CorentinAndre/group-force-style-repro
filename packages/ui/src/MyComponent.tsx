@@ -1,14 +1,10 @@
-import { YStack, styled } from 'tamagui'
+import { YStack, createStyledContext, styled } from 'tamagui'
 
 export const MyComponent = styled(YStack, {
   name: 'MyComponent',
   backgroundColor: 'red',
-
-  variants: {
-    blue: {
-      true: {
-        backgroundColor: 'blue',
-      },
-    },
-  } as const,
+  group: true,
+  hoverStyle: {
+    backgroundColor: 'blue',
+  },
 })

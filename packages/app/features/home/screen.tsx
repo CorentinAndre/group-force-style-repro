@@ -6,6 +6,7 @@ import {
   Separator,
   Sheet,
   useToastController,
+  MyComponent,
   XStack,
   YStack,
 } from '@my/ui'
@@ -26,7 +27,16 @@ export function HomeScreen() {
           Here's a basic starter to show navigating from one screen to another. This screen uses the
           same code on Next.js and React Native.
         </Paragraph>
-
+        <MyComponent>
+          <Paragraph color="black" $group-hover={{ color: 'white' }}>
+            Some text
+          </Paragraph>
+        </MyComponent>
+        <MyComponent forceStyle="hover">
+          <Paragraph color="black" $group-hover={{ color: 'white' }}>
+            Some text that should be white when parent is hovered
+          </Paragraph>
+        </MyComponent>
         <Separator />
         <Paragraph ta="center">
           Made by{' '}
